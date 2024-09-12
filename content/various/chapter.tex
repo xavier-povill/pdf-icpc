@@ -31,15 +31,15 @@
 			\item \verb@c = x&-x, r = x+c; (((r^x) >> 2)/c) | r@ is the next number after \texttt{x} with the same number of bits set.
 			\item \verb@rep(b,0,K) rep(i,0,(1 << K))@ \\ \verb@  if (i & 1 << b) D[i] += D[i^(1 << b)];@ computes all sums of subsets.
 		\end{itemize}
-%	\subsection{Pragmas}
-%		\begin{itemize}
-%			\item \lstinline{#pragma GCC optimize ("Ofast")} will make GCC auto-vectorize loops and optimizes floating points better.
-%			\item \lstinline{#pragma GCC target ("avx2")} can double performance of vectorized code, but causes crashes on old machines.
-%			\item \lstinline{#pragma GCC optimize ("trapv")} kills the program on integer overflows (but is really slow).
-%		\end{itemize}
+	\subsection{Pragmas}
+		\begin{itemize}
+			\item \lstinline{#pragma GCC optimize("Ofast,unroll-loops")} will make GCC auto-vectorize loops and optimizes floating points better.
+			\item \lstinline{#pragma GCC target ("avx2")} can double performance of vectorized code, but causes crashes on old machines.
+			\item \lstinline{#pragma GCC optimize ("trapv")} kills the program on integer overflows (but is really slow).
+		\end{itemize}
 	\kactlimport{FastMod.h}
 	\kactlimport{FastInput.h}
-%	\kactlimport{BumpAllocator.h}
+	\kactlimport{BumpAllocator.h}
 %	\kactlimport{SmallPtr.h}
 %	\kactlimport{BumpAllocatorSTL.h}
 	% \kactlimport{Unrolling.h}
